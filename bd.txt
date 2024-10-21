@@ -1,0 +1,8 @@
+create schema `tarefas` default character set utf8;
+
+create table  if not exists `tarefas`.`tarefa` (
+	`id` int not null auto_increment,
+    `descricao` varchar(200) not null,
+    `concluida` tinyint(1) not null default 0,
+    primary key (`id`))
+    engine = InnoDB;
